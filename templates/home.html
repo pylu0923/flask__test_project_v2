@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Title</title>
+    <style>
+      h1 {
+        font-size: 40px;
+        font-family: Noto Sans TC, sans-serif;
+        font-weight: normal;
+        color: rgb(100,100,100);
+        text-align: center;
+      }
+/*      用#id 只選擇這格id做style */
+      #banner {
+        width: 680px;
+        height: 100%;
+        object-fit: cover;
+        
+      }
+    </style>
+</head>
+<body>
+    <h1>PY Carrer</h1>
+    <h2>PPTGDRGDR</h2>
+<!--flask可以把local的資料夾內的圖檔以URL方式呈現, 放在static資料夾, url = flask domain/static/filename, 圖檔可以參考unsplash website -->
+    <img id = "banner" src = "https://flasktestproject.py0608.repl.co/static/cat.jpg" width = "720">
+    <h2>about PY</h2>
+<!--p tag is paragraph -->
+    <p>
+      this is a dummy paragraph, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+    <h3>opening position</h3>
+    <p>TODO - show the jobs here</p>
+    <button>Contact us</button>
+</body>
+</html> 
