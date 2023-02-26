@@ -1,0 +1,27 @@
+<!--         用div包起來換行 class border-bottom 畫底線
+             要調整border外的空白用margin, border內的用padding
+             margin是格子跟格子間的間距, padding是格子內的空白-->
+
+<!--             要把button做在跟內容同一行, 用column, column要包在row裡面
+            col的大小看文件, 不同的col要用div包起來 -->
+<div style="margin-bottom:16px; padding-bottom:4px" class="border-bottom border-dark row" >
+  <div class="col-9">
+    <h4 style="color:rgb(120,120,120); margin-bottom:4px;">
+      {{job['title']}}
+    </h4>
+    <div>
+      <b>Location :</b> {{job['location']}}
+    </div>
+  <!--           處理如果沒有salary key , 那就不顯示 -->
+    {% if 'salary' in job %}
+    <div>
+      <b>Salary :</b> {{job['salary']}}
+    </div>
+    {% endif %}
+  </div>
+  <div class="col-2">
+    <button type="button" class="btn btn-outline-primary">
+        Apply!
+    </button>
+  </div>
+</div>

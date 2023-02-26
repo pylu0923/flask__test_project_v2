@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Title</title>
+    <style>
+      h1 {
+        font-size: 40px;
+        font-family: Noto Sans TC, sans-serif;
+        font-weight: normal;
+        color: rgb(100,100,100);
+        text-align: center;
+      }
+/*      用#id 只選擇這格id做style
+      把所有內容都置中的方法要用div把內容把起來, div有box屬性
+      border如橘線所示, 外是margin, 內是content,
+      margin設置上下左右設成0 auto 0 auto可以讓內容置中 */
+      #container {
+        max-width:720px;
+        margin: 0 auto 0 auto;
+        border:10px solid orange
+      }
+/*       用.class 選擇這個class做style */
+      .bodytext {
+        color: rgb(255,0,0);
+      }
+      #banner {
+        width: 680px;
+        height: 100%;
+        object-fit: cover;
+        
+      }
+    </style>
+</head>
+<body>
+    <div id="container">
+      <h1>PY Carrer</h1>
+  <!--flask可以把local的資料夾內的圖檔以URL方式呈現, 放在static資料夾, url = flask domain/static/filename, 圖檔可以參考unsplash website -->
+      <img id = "banner" src = "https://flasktestproject.py0608.repl.co/static/cat.jpg" width = "720">
+      <h2>about PY</h2>
+  <!--p tag is paragraph -->
+      <p class="bodytext">
+        this is a dummy paragraph, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      </p>
+      <h3>opening position</h3>
+      <p class="bodytext">TODO - show the jobs here</p>
+<!--       button置中也用div包起來, 再把text-align:center button就會置中。 -->
+      <div style="text-align:center; border:5px solid black">
+        <button>Contact us</button>
+        <p>copyright, 2023, PY</p>
+      </div>
+    </div>
+</body>
+</html> 
