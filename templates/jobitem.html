@@ -12,8 +12,9 @@
     <div>
       <b>Location :</b> {{job['location']}}
     </div>
-  <!--           處理如果沒有salary key , 那就不顯示 -->
-    {% if 'salary' in job %}
+  <!--           處理如果沒有salary key , 那就不顯示 ==> if 'salary' not in job -->
+<!--   連接sql改成if job['salary'] 因為都有salary key 但是沒填入會是None  -->
+    {% if job['salary'] %} 
     <div>
       <b>Salary :</b> {{job['salary']}}
     </div>
