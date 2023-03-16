@@ -1,0 +1,39 @@
+<h4>Application Form</h4>
+<!-- action : 按下submit後, 這些資訊會往哪個頁面(app)送 , 第一個job是app路徑, 第二個是job頁面內的變數name-->
+<!-- /job/1/apply?full_name=dw&email=pylu0923%40gmail.com&linkedin=&submit=%E6%8F%90%E4%BA%A4 -->
+<!-- method 用post就不會把資訊接在URL後面 -->
+<form action="/job/{{job['id']}}/apply" method="post">
+<!--   label = 輸入格前面的標籤 
+  /job/1?full_name=&email=&linkedin=&submit=%E6%8F%90%E4%BA%A4  name出現在按下submit後的網址, 如果不想得到某個參數就不用設定name-->
+  <div class="mb-2">
+  <label>Full Name</label><br>
+  <input type="text" name="full_name" placeholder="BruceWayne">
+  </div>
+
+  <div class="mb-2">
+  <label>E-mail</label><br>
+  <input type="text" name="email" placeholder="123@456.com">
+  </div>
+
+  <div class="mb-2">
+  <label>LinkedIn URL</label><br>
+  <input type="text" name="linkedin" placeholder="linedIn..">
+  </div>
+
+  <div class="mb-2">
+  <label>Education</label><br>
+  <textarea name="education"></textarea>
+  </div>
+
+  <div class="mb-2">
+  <label>Working experience</label><br>
+  <textarea name="work_experience"></textarea>
+  </div>
+
+  <input type="submit">
+  
+
+
+
+  
+</form>

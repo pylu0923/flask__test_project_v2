@@ -24,10 +24,20 @@
         {% endfor %}
         {% endif %}
       </ul>
+      <h4>Requirements</h4>
+      <ul>
+        {% if job['requirements'] %}
+        {% for line in job['requirements'].split("\n") %}
+          <li>{{line}}</li>
+        {% endfor %}
+        {% endif %}
+      </ul>
       <h4>Salary</h4>
       <p>{{job['salary']}}</p>
-     {% include 'footer.html' %}
+      {% include 'application_form.html' %}
+      
     </div>
+    {% include 'footer.html' %}
   </body>
 </html>
 
